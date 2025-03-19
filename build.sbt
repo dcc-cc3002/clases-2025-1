@@ -7,4 +7,6 @@ lazy val root = (project in file("."))
     name := "clases-2025-1"
   )
 
-libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test
+libraryDependencies += "org.scalameta" %% "munit" % "1.1.0" % Test
+// Solo para ilustrar JUnit, no es necesario para munit
+libraryDependencies += "org.junit.jupiter" % "junit-jupiter-api" % "5.12.1" % Test
