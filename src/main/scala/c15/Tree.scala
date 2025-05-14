@@ -1,5 +1,7 @@
 package c15
 
+import scala.collection.mutable.ListBuffer
+
 case class Persona(val nombre: String, val edad: Int)
     extends Comparable[Persona]:
   def compareTo(other: Persona): Int =
@@ -42,4 +44,17 @@ object Main {
       new InnerNode[Persona](new Persona("Tralalero Tralala", 5), leaf1, leaf2)
     println(tree.find(new Persona("Foo", 10)))
     println(tree.max())
+}
+object Lala {
+  trait Animal
+  class Cat extends Animal
+
+  class Foo[T] {
+    def bar(): T = ???
+    def baz(x: T) = ???
+  }
+  def qux[S <: Animal](f: Foo[S]) = ???
+  // class Foo[+T]... => Foo[Cat] <: Foo[Animal]
+  // class Foo[-T]... => Foo[Animal] <: Foo[Cat]
+  qux(new Foo[Cat])
 }
