@@ -1,5 +1,5 @@
 package c03
 
-class Money(private var amount: Int, _currency: String) {
-    def add(m: Money): Money = ???
+class Money(val amount: Int, val currency: String) {
+  def add(that: Money) : Money = ???
 }
